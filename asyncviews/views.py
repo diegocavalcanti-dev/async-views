@@ -26,12 +26,3 @@ async def async_view(request):
 def sync_view(request):
     http_call_sync()
     return HttpResponse("Blocking HTTP request")
-
-
-# def api(request):
-#     time.sleep(1)
-#     payload = {"message": "Hello World!"}
-    
-#     if "task_id" in request.GET:
-#         payload["task_id"] = request.GET["task_id"]
-#     return JsonResponse(payload)
